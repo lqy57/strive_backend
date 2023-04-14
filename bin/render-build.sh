@@ -3,6 +3,6 @@
 set -o errexit
 
 bundle install
-bundle exec rake assets:precompile
-bundle exec rake assets:clean
+rm -rf public
 bundle exec rake db:migrate
+cp -a client/build/. public/
