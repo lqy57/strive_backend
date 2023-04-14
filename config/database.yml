@@ -71,12 +71,12 @@ test:
 #
 # You can use this database configuration with:
 #
-  production:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: mysite_production
-#   username: mysite
-#   password: <%= ENV['DATABASE_URL'] %>
+production:
+  <<: *default
+  database: mysite_production
+  username: mysite
+  password: <%= ENV['DATABASE_URL'] %>
