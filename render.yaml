@@ -1,18 +1,18 @@
 databases:
-  - name: Strive
-    databaseName: strive-backend
-    user: lqy57
+  - name: strive_backend
+    databaseName: strive_backend
+    user: strive_backend
 
 services:
   - type: web
-    name: Strive
+    name: strive_backend
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: strive-backend
+          name: strive_backend
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
